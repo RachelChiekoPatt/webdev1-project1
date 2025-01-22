@@ -1,0 +1,146 @@
+/*BODY*/
+body {
+    font-family: "Quicksand", serif;
+    font-weight: 600;
+    line-height: 30px;
+    color:rgb(223, 216, 200);
+    background-color: black;
+}
+/*LINKS*/
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, a:focus {
+    color: white;
+    background-color: rgb(118, 117, 75);
+}
+
+
+/*HEADER*/
+header {
+    display: flex;
+    background-color: rgb(223, 216, 200); 
+    
+}
+
+.site-logo {
+    min-width: 30px;
+    position: absolute;
+}
+
+.nav-items {
+    list-style-type: none;
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-grow: 1; 
+    padding: 0 2rem;
+    margin: 0;
+}
+
+/* I tried to do a drop down menu but I didn;t understand what I did at all -- try again at the end. maybe on a separate file so you don't mess anything up. */
+
+/*MAIN*/
+
+main {
+    padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Figtree", serif;
+    font-weight: 300;
+    text-align: center;
+    font-family: ;
+}
+
+h1 {
+    font-weight: 500;
+    color: rgb(223, 216, 200);
+}
+
+    /* about me */
+.about-me {
+    background-color: white;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 5px black;
+    border-radius: 25px;
+    box-shadow: 10px 10px rgb(223, 216, 200);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    
+}
+.about-me h2 {
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section1 img {
+    border: solid 5px transparent;
+    box-shadow:  10px 10px rgb(223, 216, 200);
+    border-radius: 25px;
+}
+
+
+
+    /* projects */
+.web-projects {
+    padding: 1rem;
+    margin-top: 4rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    background-color: rgb(0, 0, 0);
+    color: rgb(223, 216, 200);
+}
+
+.projects {
+    border: solid rgb(223, 216, 200) 2px;
+    border-radius: 50px;
+    background-image: linear-gradient(180deg, #000000 70%, rgb(223, 216, 200) calc(70% + 2px)); /*https://edavis.github.io/2018/02/04/create-an-angled-background-in-css/ this is where I got this line of code*/
+    padding: 2rem;
+    transition: .5s ease-in-out; /*pretty cool, no purpose though ahaha */
+}
+.projects:hover {
+    color: black;
+    background-image: linear-gradient(180deg, rgb(223, 216, 200) 70%, black calc(70% + 2px));
+}
+.project-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.project-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(223, 216, 200) 2px;
+    border-radius: 8px;
+    background-image: linear-gradient(172deg, #000000 70%, rgb(223, 216, 200) calc(70% + 2px)); /*https://edavis.github.io/2018/02/04/create-an-angled-background-in-css/ this is where I got this line of code*/
+    padding: 3rem;
+    margin: 1rem;
+    line-height: 18px;
+    transition: .5s ease-in-out;
+    flex: 1 1 30%;  
+}
+.project-list li:hover {
+    background-image: linear-gradient(180deg, #000000 70%, rgb(223, 216, 200) calc(70% + 2px));
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: rgb(223, 216, 200);
+    color: rgb(223, 216, 200);
+}
