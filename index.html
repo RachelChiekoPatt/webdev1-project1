@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
     <!-- Font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,84 +11,150 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
     <title>Rachel C Patterson</title>
+
     <!-- CSS links -->
     <link rel="stylesheet" href="styles/normalize-fwd1.css">
     <link rel="stylesheet" href="styles/style.css">
+   
 </head>
 
 <body>
 
-    <header>
+        <div class="bgimage">
 
-        <a href="index.html" class="site-logo"><img src="media/logo.jpg" alt="letters r and c as logo" width="30px"></a>
+            <header id="top">
 
-        <nav class="navbar"></nav>
-        
-            <ul class="nav-items">
-                <li><a href="index.html">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#artwork">Artwork</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            
-        </nav>
+                <a href="index.html" class="site-logo"><img src="media/site-logo3.jpg" alt="letters r and c as logo" width="30px"></a>
 
-    </header>
-    <main>
-        <section class="section1" id="top">
+                <!-- https://codepen.io/jr/pen/rdvbEo for lines 33 and 34 -->
 
-             <h1>Rachel C Patterson</h1>
+                <label for="menu-toggle" class="menu-icon">☰</label>
+                <input id="menu-toggle" type="checkbox">
 
-                <div class="about-me">
+                <nav class="navbar">
+                
+                    <ul class="nav-items">
 
-                    <h2>About me</h2>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#artwork">Artwork</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        
+                    </ul>
+                    
+                </nav>
 
-                    <p>Hello to everyone! My name is Rachel and I'm a current student in the Front-End Developer program at BCIT. I have a Bachelors of Fine Arts from Emily Carr University where I mainly practiced Ceramic Art and Design. Add more......</p>
-                </div>
+            </header>
+            <main>
+                <section class="section1">
 
-            <!--<img src="media/camping.jpg" alt="Group of people camping by a lake" width="500px">-->
-        </section>
+                    <h1>Rachel C Patterson</h1>
+
+                        <div class="about-me">
+
+                            <h2>About me</h2>
+
+                            <p>Hello to everyone! My name is Rachel and I'm a current student in the Front-End Developer program at BCIT. I have a Bachelors of Fine Arts from Emily Carr University where I mainly practiced Ceramic Art and Design. Add more......</p>
+                        
+                        </div>
+
+                </section>
+
+        </div>
+
+
 
         <section> 
 
             <div class="web-projects">
             
                 <h2 class="projects" id="projects">Projects</h2>
+
+                    <div class="symbols">
+                        <img src="media/icons8-html.svg" alt="html symbol"> <!-- https://icons8.com/icon/set/files/ios for line 76-78-->
+                        <img src="media/icons8-css.svg" alt="css symbol">
+                        <img src="media/icons8-js.svg" alt="javascript symbol">
+                    </div>
+
                 <ul class="project-list">
-                    <li>JavaScript Game<p>coming soon...</p></li>
-                    <li>Country Website<p>coming soon...</p></li>
-                    <li>Business Website<p>coming soon...</p></li>
-                    <li>Movie Database<p>coming soon...</p></li>
-                    <li>WordPress Site - Vancouver<p>coming soon...</p></li>
-                    <li>WordPress - Mindset<p>coming soon...</p></li>
-                    <li>WordPress - School<p>coming soon...</p></li>
-                    <li>Shopify Store<p>coming soon...</p></li>
-                    <li>WooCommerce Store<p>coming soon...</p></li>
+                    <li>
+                        <a href="#">JavaScript Game</a>
+                        <p>coming soon...</p>
+                    </li>
+                    <li>
+                        <a href="#">Country Website</a>
+                        <p>coming soon...</p>
+                    </li>
+                    <li>
+                        <a href="#">Business Website</a>
+                        <p>coming soon...</p>
+                    </li>
+                    <li>
+                        <a href="#">Movie Database</a>
+                        <p>coming soon...</p>
+                    </li>
+                    <li>
+                        <a href="#">WordPress Site - Vancouver</a>
+                        <p>coming soon...</p>
+                    </li>
+                    <li>
+                        <a href="#">WordPress - Mindset</a>
+                        <p>coming soon...</p>
+                    </li>
+                    <li>
+                        <a href="#">WordPress - School</a>
+                        <p>coming soon...</p>
+                    </li>
+                    <li>
+                        <a href="#">Shopify Store</a>
+                        <p>coming soon...</p>
+                    </li>
+                    <li>
+                        <a href="#">WooCommerce Store</a>
+                        <p>coming soon...</p>
+                    </li>
                 </ul>
+
             </div> 
 
             <h2 class="artwork" id="artwork">Artwork</h2>
 
-        <div class="gallery">
+            <h2 class="ceramic">Ceramics.</h2> 
+<!--https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp lines 126 to 148-->
+                <div class="scroll-ceramic">
 
-            <h2 style="font-size:8vw" class="ceramic">Ceramics.</h2> 
+                    <img src="media/ceramics7.JPG" alt="photo of two ceramic cylinders" width="500px">
+                    <img src="media/ceramics8.JPG" width="500px">
+                    <img src="media/ceramics2.jpg" width="500px">
+                    <img src="media/ceramics3.JPG" width="500px">
+                    <img src="media/ceramics4.JPG" width="500px">
+                    <img src="media/ceramics5.JPG" width="500px">
+                    <img src="media/ceramics6.png" width="500px">
+                    <img src="media/ceramics9.JPG" width="500px">
+                    <img src="media/ceramics10.JPG" width="500px">
+            
+                </div>
 
-            <img src="media/ceramics.JPG" alt="photo of two ceramic cylinders" width="500px" class="ceramicpic">
+            <h2 class="illustration">Illustrations.</h2>
 
-            <h2 style="font-size:8vw" class="illustration">Illustrations.</h2>
+                <div class="scroll-ilus">
 
-            <img src="media/illustration.jpg" alt="drawing of a woman in Ryukyu hanagasa" width="500px" class="illuspic">
+                    <img src="media/illustration.jpg" alt="drawing of a woman in Ryukyu hanagasa" width="500px">
+                    <img src="media/illustration3.JPG" alt="drawing of a wave" width="500px">
+                    <img src="media/illustration2.JPG" alt="drawing of an astronaut cooking breakfast" width="500px">
 
-        </div>
+                </div>
+
         </section>
     </main>
 </body>
 
     <footer>
 
-        <p><a href="#top">Back to the top</a></p>
-       <email id="contact" class="email" href="mailto:rachelpatterson16@gmail.com">Contact Me</email>
+        <p><a href="#top" class="btt">↑ Back to the top ↑</a></p>
+       <button class="emailbtn"><a id="contact" href="mailto:rachelpatterson16@gmail.com">Contact Me!</a></button>
         
     </footer>
 

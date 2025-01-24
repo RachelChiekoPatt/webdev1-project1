@@ -1,5 +1,13 @@
 
-/*BODY*/
+/*-------------------------------------------------------------------------------------------
+
+BODY
+
+-------------------------------------------------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Quicksand", serif;
     font-weight: 600;
@@ -9,46 +17,109 @@ body {
 }
 
 
-/*LINKS*/
+/*-------------------------------------------------------------------------------------------
+
+LINKS
+
+-------------------------------------------------------------------------------------------*/
 a:link, a:visited, a:active {
     text-decoration: none;
     color: black;
 }
 
-a:hover, a:focus {
+a {
+    transition: all 0.3s;
+}
+
+a:hover {
     color: white;
-    background-color: rgb(118, 117, 75);
+    background-color:   rgb(249, 135, 205);
+    padding: 0.8rem;
+    margin: -.8rem; /* I'm assuming this is pretty hacky, I couldn't figure it out though*/
+    border-radius: 25px;
+}
+
+a:focus {
+    color: white;
+    background-color:   rgb(249, 135, 205);
+    padding: .8rem;
+    margin: -.8rem;
+}
+
+/* I don't know why, but the label:focus doesn't work*/
+label:hover, label:focus {
+    color: white;
+    background-color:   rgb(249, 135, 205);
+    transition: 0.3s;
 }
 
 
-/*HEADER*/
+/*-------------------------------------------------------------------------------------------
+
+HEADER
+
+--------------------------------------------------------------------------------------------*/
 header {
     display: flex;
-    background-color: rgb(255, 255, 255); 
+    background-color: transparent; 
     
 }
 
 .site-logo {
-    min-width: 30px;
-    position: absolute;
-} /*change the logo color to white*/
+    display: none;
+} 
+
+.bgimage {
+    background-image: url('../media/purplesky.jpg'); /* https://www.pexels.com/photo/purple-sky-1287142/ where I got the picture */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* https://codepen.io/jr/pen/rdvbEo for lines 59 - 71 */
+
+label {
+	cursor: pointer;
+	font-size: 2rem;
+    position: relative;
+}
+
+input {
+	opacity: 0;
+	pointer-events: none;
+}
+
+input:not(:checked) ~ nav {
+	display: none;
+}
+
 
 .nav-items {
     list-style-type: none;
-    font-size: small;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-grow: 1; 
-    padding: 0 2rem;
+    padding-inline-start: 0px; /*Again, I put this here too because of a browser setting?*/
     margin: 0;
+    position: absolute;
+    top: 0;
 }
 
-/* I tried to do a drop down menu but I didn;t understand what I did at all -- try again at the end. maybe on a separate file so you don't mess anything up. */
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nav-items li {
+   font-size: large;
+   margin-bottom: .8rem;
+   
+}
 
 
 
-/*MAIN*/
+/*----------------------------------------------------------------------------
+
+MAIN
+
+--------------------------------------------------------------------------------*/
 
 main {
     padding: 0 1rem ;
@@ -65,15 +136,19 @@ h3 {
 
 h1 {
     text-align: left;
-    font-weight: 400;
+    font-weight: 600;
     color: rgb(0, 0, 0);
     margin-top: 0;
-    padding: 6rem 10rem;
+    padding: 10rem 10rem 1rem;
     text-shadow: 3px 1px rgb(182, 137, 203);
     
 }
 
-    /* about me */
+    /* ---------------------------------------------------------------------------
+
+    about me 
+
+    ----------------------------------------------------------------------------*/
 
 
 .about-me {
@@ -85,7 +160,7 @@ h1 {
 }
    
 .about-me h2 {
-    font-weight: 400;
+    font-weight: 600;
     text-align: right;
     margin-top: 0;
     margin-bottom: 0;
@@ -95,62 +170,43 @@ h1 {
 }  
 
 .section1 {
-    background-image: url('../media/purplesky.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     margin-left: -1rem;
     margin-right: -1rem;
-  
+} 
+
+    /* -------------------------------------------------------------------------------------------
+    
+    projects
+    
+   -------------------------------------------------------------------------------------------*/
+
+
+.web-projects {
+   
+    background-color: white;
+    color:rgb(0, 0, 0);
     
 }
 
-/*.section1 img {
-    border: solid 5px transparent;
-    box-shadow:  10px 10px rgb(223, 216, 200);
-    border-radius: 25px;
-}
-    Don't think I want to use this */
-
-
-
-    /* projects */
-.web-projects {
-    padding: 1rem;
-    margin-top: 1rem;
-    margin-left: -1rem;
-    margin-right: -1rem;
-    background-color: white;
-    color:rgb(0, 0, 0);
-    font-weight: 900;
+.symbols {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
 }
 
 .projects {
+    font-size: clamp(3rem, 8vw, 10rem);
     font-weight: 500;
-    text-shadow: 1px 1px rgb(182, 137, 203);
+    text-shadow: 2px 1px rgb(182, 137, 203);
     padding: 3rem;
 }
 
-/*.projects {
-    border: solid rgb(182, 137, 203) 3px;
-    border-radius: 20px;
-    background-image: linear-gradient(180deg, #ffffff 70%, rgb(206, 166, 225) calc(70% + 2px)); /*https://edavis.github.io/2018/02/04/create-an-angled-background-in-css/ this is where I got this line of code*/
-   /* border-width:initial;
-    text-shadow: 1px 1px rgb(182, 137, 203);
-    padding: 2rem;
-    transition: .5s ease-in-out; pretty cool, no purpose though ahaha */
-
-/*.projects:hover {
-    color: white;
-    background-image: linear-gradient(180deg, rgb(206, 166, 225) 70%, rgb(255, 255, 255) calc(70% + 2px));*/
-
-    /* scrapped this design ^ */
-
 .project-list {
-    list-style-type: none;
+    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    padding-inline-start: 0px; /*to offset the browser padding. I wasn't sure if I should put it here or on the normalize sheet*/
+    
 }
 
 .project-list li {
@@ -160,7 +216,7 @@ h1 {
     align-items: center;
     border: solid rgb(206, 166, 225) 2px;
     border-radius: 8px;
-    background-image: linear-gradient(172deg, #ffffff 70%, rgb(206, 166, 225) calc(70% + 2px)); /*https://edavis.github.io/2018/02/04/create-an-angled-background-in-css/ this is where I got this line of code*/
+    background-image: linear-gradient(172deg, #ffffff 70%, rgb(206, 166, 225) calc(70% + 2px)); /*https://edavis.github.io/2018/02/04/create-an-angled-background-in-css/ this is where I got the code for lines 194 and 202*/
     padding: 2rem;
     margin: 1rem;
     line-height: 18px;
@@ -171,31 +227,28 @@ h1 {
     background-image: linear-gradient(180deg, white 70%, rgb(206, 166, 225) calc(70% + 2px));
 }
 
-/*ARTWORK*/
+/*-------------------------------------------------------------------------------------------
+
+ARTWORK
+
+-------------------------------------------------------------------------------------------*/
 
 .artwork {
     font-weight: 500;
-    text-shadow: 1px 1px rgb(182, 137, 203);
+    font-size: clamp(3rem, 8vw, 10rem);
+    text-shadow: 2px 1px rgb(182, 137, 203);
     padding: 3rem;
-}
-
-.gallery {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-    
 }
 
 .ceramic,
 .illustration {
+    font-size: clamp(3rem, 8vw, 8rem);
     z-index: 2;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px black;
-    cursor: pointer;
     transition: transform 0.5s;
-
 }
+/*https://www.youtube.com/watch?v=ua2vl8EEIHA this is where I got the code for lines 226-241. only used the font style from the video. */
 
 .ceramic:hover,
 .illustration:hover {
@@ -203,29 +256,56 @@ h1 {
     transform: translateY(-10px);
 } 
 
-.ceramicpic {
-    margin: 3rem;
-} 
+/*https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp lines 241 - 261*/
 
-.illuspic {
-    margin: 3rem;
-}
+div.scroll-ceramic {
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 1rem;
+  }
+  
+div.scroll-ceramic img {
+    padding: 1rem;
+  }
 
-/*FOOTER*/
+div.scroll-ilus {
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 1rem;
+  }
+  
+div.scroll-ilus img {
+    padding: 1rem;
+  }
+
+
+
+/*-------------------------------------------------------------------------------------------
+
+FOOTER
+
+-------------------------------------------------------------------------------------------*/
 
 footer {
     background-color: rgb(206, 166, 225);
-    color: rgb(223, 216, 200);
+    color: rgb(0, 0, 0);
     text-align: center;
     margin-bottom: 2rem;
 } 
 
-.email {
-    position: relative;
-    background-color: white;
-    color: rgb(206, 166, 225);
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 25%;
-    margin-bottom: 2rem;
-} /* STILL WORKING ON THIS*/
+.emailbtn {
+    font-weight: 700;
+    border: 2px black solid;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+}
+
+footer {
+    padding: 1rem;
+    font-size: larger;
+}
 
