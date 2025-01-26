@@ -13,7 +13,7 @@ body {
     font-weight: 600;
     line-height: 30px;
     color: black;
-    background-color: transparent(0, 0, 0);
+    
 }
 
 
@@ -195,7 +195,7 @@ h1 {
 }
 
 .projects {
-    font-size: clamp(3rem, 8vw, 10rem);
+    font-size: clamp(3rem, 5vw, 5rem);
     font-weight: 500;
     text-shadow: 2px 1px rgb(182, 137, 203);
     padding: 3rem;
@@ -235,14 +235,14 @@ ARTWORK
 
 .artwork {
     font-weight: 500;
-    font-size: clamp(3rem, 8vw, 10rem);
+    font-size: clamp(3rem, 5vw, 5rem);
     text-shadow: 2px 1px rgb(182, 137, 203);
     padding: 3rem;
 }
 
 .ceramic,
 .illustration {
-    font-size: clamp(3rem, 8vw, 8rem);
+    font-size: clamp(3rem, 8vw, 4rem);
     z-index: 2;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px black;
@@ -289,23 +289,90 @@ FOOTER
 -------------------------------------------------------------------------------------------*/
 
 footer {
-    background-color: rgb(206, 166, 225);
+    background-image: url('../media/purplesky.jpg'); /* https://www.pexels.com/photo/purple-sky-1287142/ where I got the picture */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: rgb(0, 0, 0);
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: auto;
+    padding: 2rem;
 } 
 
 .emailbtn {
     font-weight: 700;
     border: 2px black solid;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 25px;
-    background-color: rgb(255, 255, 255);
+    padding: .5rem;
+    margin: .5rem;
+    background-color: rgb(206, 166, 225);
 }
 
-footer {
-    padding: 1rem;
-    font-size: larger;
+footer p {
+    padding-bottom: 2rem;
 }
 
+
+
+/*------------------------------------------------------
+
+media query
+
+-------------------------------------------------------------------*/
+
+@media (min-width: 43.75em) {
+/* navigation bar */
+label,
+ input {
+    display: none;
+}
+
+.site-logo {
+    display: block;
+    min-width: 30px;
+    position: absolute;
+} 
+
+.navbar {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    background-color: white;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+}
+
+.nav-items li {
+    margin-bottom: 0;
+    margin-right: 4rem;
+}
+
+/*about me*/
+
+h1 {
+    font-size: 35px;
+}
+
+.about-me h2 {
+    font-size: 30px;
+}
+
+.about-me p {
+max-width: 50%;
+font-size: 23px;
+line-height: 35px;
+margin: auto;
+margin-top: 5rem;
+}
+
+.section1 {
+    padding: 6rem 2rem;
+}
+
+/* I didn't change the rest because I like it expands out*/
+}
